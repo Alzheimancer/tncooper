@@ -4,10 +4,10 @@ const Schema = mongoose.Schema;
 
 const ProductSchema = new Schema({
     number: {
-        type: String,
+        type: Number,
         required: true
     },
-    name: {
+    topic: {
         type: String,
         required: true
     },
@@ -27,21 +27,23 @@ const ProductSchema = new Schema({
         type: Number,
         required: true
     },
-    latitude: {
-        type: Number,
-        required: false
-    },
-    longitude: {
-        type: Number,
-        required: false
-    },
-    province: {
-        type: String,
-        required: true
-    },
-    sector: { // format: ['เหนือ', 'ใต้', 'กลาง', 'อีสาน', 'ตะวันออก']
-        type: String,
-        required: true
+    location: {
+        latitude: {
+            type: Number,
+            required: false
+        },
+        longitude: {
+            type: Number,
+            required: false
+        },
+        province: {
+            type: String,
+            required: true
+        },
+        sector: { // format: ['เหนือ', 'ใต้', 'กลาง', 'อีสาน', 'ตะวันออก']
+            type: String,
+            required: true
+        }
     },
     postedBy: {
         type: String,
